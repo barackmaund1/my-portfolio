@@ -1,0 +1,38 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block content%}
+<section class="ftco-section bg-light" id="blog-section">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-5">
+        <div class="col-md-7 heading-section text-center ftco-animate">
+          <span class="subheading">Accomplishments</span>
+          <h2 class="mb-4">My Projects</h2>
+          <p>Here below, are some of projects i have done but still you can find others in my github profile</p>
+        </div>
+      </div>
+      
+      <div class="row d-flex">
+        {% for post in  projects %}
+        <div class="col-md-4 d-flex ftco-animate">
+            <div class="blog-entry justify-content-end">
+            <a href="{{post.url}}" class="block-20" ><img src="{{post.photo.cdn_url}}" height="100%" width="100%">
+            </a>
+            <div class="text mt-3 float-right d-block">
+                <div class="d-flex align-items-center mb-3 meta">
+                  <p class="mb-0">
+                      <span class="mr-2">{{post.date_posted}}</span>
+                      <a href="{{post.url}}" class="mr-2">{{post.title}}</a>
+                      <a href="" class="meta-chat"><span class="icon-chat"></span> </a>
+                  </p>
+              </div>
+              <h3 class="heading"><a href="single.html">{{post.technologies}}</a></h3>
+              <p>{{post.description}}</p>
+            </div>
+          </div>
+        </div>
+        {%endfor%}
+      </div>
+     
+    </div>
+  </section>
+{%endblock%}
