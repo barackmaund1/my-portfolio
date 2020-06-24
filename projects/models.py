@@ -18,4 +18,11 @@ class Post(models.Model):
     def search_project(cls, technologies):
         return cls.objects.filter(title__icontains=technologies).all()    
 
-class Person(models.model)
+class Person(models.Model):
+    name=models.CharField(max_length=200)
+    email=models.EmailField(max_length=200)
+    subject=models.CharField(max_length=200)
+    message=models.TextField(max_length=250)
+
+    def __str__(self):
+        return f'{self.name}'
