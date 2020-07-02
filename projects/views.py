@@ -37,10 +37,10 @@ def createpost(request) :
 def newsletter(request):
     name = request.POST.get('name')
     email = request.POST.get('email')
-    contact=request.POST.get('contact')
+    subject=request.POST.get('subject')
     message=request.POST.get('message')
     
-    recipient=Person(name=name,email=email,contact=contact,message=message)
+    recipient=Person(name=name,email=email,subject=subject,message=message)
     recipient.save()
     send_welcome_email(name,email)
     data = {'success': 'Your message has been successfully received and message sent to your email'}

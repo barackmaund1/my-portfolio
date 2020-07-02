@@ -18,7 +18,7 @@ $(document).ready(function(){
       })// END of Ajax method
       $('#id_name').val('')
       $("#id_email").val('')
-      $("#id_contact").val('')
+      $("#id_subject").val('')
       $("#id_message").val('')
     }) // End of submit event
   

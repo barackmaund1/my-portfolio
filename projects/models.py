@@ -19,10 +19,10 @@ class Post(models.Model):
         return cls.objects.filter(title__icontains=technologies).all()    
 
 class Person(models.Model):
-    name=models.CharField(max_length=200,null=True, blank=True)
-    email=models.EmailField(max_length=200,null=True, blank=True)
-    contact=models.CharField(max_length=200,null=True, blank=True)
-    message=models.TextField(max_length=250,null=True, blank=True)
+    name=models.CharField(max_length=200,null=True,blank=True)
+    email=models.EmailField(max_length=200,null=True,blank=True)
+    subject=models.CharField(max_length=200,null=True,blank=True)
+    message=models.TextField(max_length=250,null=True,blank=True)
 
     def __str__(self):
         return f'{self.name}'
