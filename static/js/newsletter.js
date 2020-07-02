@@ -14,7 +14,7 @@ $(document).ready(function(){
             data['success'],
             'success'
           )
-        }
+        },
       })// END of Ajax method
       $('#id_name').val('')
       $("#id_email").val('')
