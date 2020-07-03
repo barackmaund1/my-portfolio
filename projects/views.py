@@ -29,7 +29,8 @@ class PostListView(ListView):
 #     else:
 #         return render(request,'base.html')
 
-
+def home(request):
+    return render(request, 'base.html')
 def createpost(request) :  
     post=Person()  
      
