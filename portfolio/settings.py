@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'pyuploadcare.dj',
     'rest_framework',
     'apis',
+    'square'
 ]
 
 REST_FRAMEWORK = {

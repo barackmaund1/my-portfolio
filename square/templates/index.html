@@ -1,0 +1,134 @@
+
+{%load static%}
+{% load bootstrap4%}
+
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="{%static 'css1/open-iconic-bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css1/animate.css'%}">
+    
+    <link rel="stylesheet" href="{%static 'css1/owl.carousel.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css1/owl.theme.default.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css1/magnific-popup.css'%}">
+
+    <link rel="stylesheet" href="{%static 'css1/aos.css'%}">
+
+    <link rel="stylesheet" href="{%static 'css1/ionicons.min.css'%}">
+    
+    <link rel="stylesheet" href="{%static 'css1/flaticon.css'%}">
+    <link rel="stylesheet" href="{%static 'css1/icomoon.css'%}">
+    <link rel="stylesheet" href="{%static 'css1/style.css'%}">
+  
+   
+    
+
+
+  {%block content%}{%endblock%}
+    
+   
+	<section class="testimony-section" data-section="testimony">
+		<div class="container">
+		  <div class="row ftco-animate justify-content-center">
+			  <div class="col-md-12 d-flex align-items-center">
+				  <div class="carousel-testimony owl-carousel">
+					  <div class="item">
+						  <div class="testimony-wrap d-flex align-items-stretch">
+						<div class="user-img d-flex align-self-stretch" style="background-image: url({%static 'images1/rap.png'%})">
+						</div>
+						<div class="text d-flex align-items-center">
+							<div>
+								<div class="icon-quote">
+									<span class="icon-quote-left"></span>
+								</div>
+							  <p class="mb-4">I love the way you solve problems.</p>
+							  <p class="name">Raphael katana</p>
+							  <span class="position">Technical mentor,at Moringa school </span>
+						  </div>
+						</div>
+					  </div>
+					  </div>
+					  <div class="item">
+						  <div class="testimony-wrap d-flex align-items-stretch">
+						<div class="user-img d-flex align-self-stretch" style="background-image: url({%static 'images1/emma.png'%})">
+						</div>
+						<div class="text d-flex align-items-center">
+							<div>
+								<div class="icon-quote">
+									<span class="icon-quote-left"></span>
+								</div>
+							  <p class="mb-4">You are such a great leader! and responsible.</p>
+							  <p class="name">Emma Sharon</p>
+							  <span class="position">Technical mentor,Access department at moringa</span>
+						  </div>
+						</div>
+					  </div>
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+		</div>
+	  </section>
+    
+   
+    
+  
+
+	<section class="ftco-section contact-section ftco-no-pb" data-section="contact">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+			<div class="col-md-7 heading-section text-center ftco-animate">
+			  <span class="subheading">Contact</span>
+			  <h2 class="mb-4">Contact Me</h2>
+			  <p></p>
+			</div>
+		  </div>
+		  <div class="row no-gutters block-9">
+			<div class="col-md-6 order-md-last d-flex">
+				<form action="{% url 'projects:newsletter' %}" class="bg-light p-5 contact-form" method="POST"  enctype="multipart/form-data">
+					{% csrf_token %}
+					<div class="form-group">
+					  <input type="text" class="form-control"id="name" name="name" placeholder="Your Name" required>
+					</div>
+					<div class="form-group">
+					  <input type="text" class="form-control"  id="email" name='email'placeholder="Your Email" required>
+					</div>
+					<div class="form-group">
+					  <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject"required>
+					</div>
+					<div class="form-group">
+					  <textarea  name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
+					</div>
+					<div class="form-group">
+					  <input type="submit" value="Send Message" class="btn btn-secondary py-3 px-5">
+					</div>
+				  </form>
+			
+			</div>
+  
+			<div class="col-md-6 d-flex">
+				<div class="img" style="background-image: url({%static 'images/3.jpg'%});"></div>
+			</div>
+		  </div>
+		</div>
+	  </section>
+
+
+  <script src="{%static 'js1/jquery.min.js'%}"></script>
+  <script src="{%static 'js1/jquery-migrate-3.0.1.min.js'%}"></script>
+  <script src="{%static 'js1/popper.min.js'%}"></script>
+  <script src="{%static 'js1/bootstrap.min.js'%}"></script>
+  <script src="{%static 'js1/jquery.easing.1.3.js'%}"></script>
+  <script src="{%static 'js1/jquery.waypoints.min.js'%}"></script>
+  <script src="{%static 'js1/jquery.stellar.min.js'%}"></script>
+  <script src="{%static 'js1/owl.carousel.min.js'%}"></script>
+  <script src="{%static 'js1/jquery.magnific-popup.min.js'%}"></script>
+  <script src="{%static 'js1/aos.js'%}"></script>
+  <script src="{%static 'js1/jquery.animateNumber.min.js'%}"></script>
+  <script src="{%static 'js1/scrollax.min.js'%}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{%static 'js1/google-map.js'%}"></script>
+  <script src="{%static 'js1/main.js'%}"></script>
+    
+ 

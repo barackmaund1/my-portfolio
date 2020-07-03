@@ -28,8 +28,8 @@
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 	  
 	  
-    {%include 'navbar.html'%}
-	  <section id="home-section" class="hero">
+    {%include 'navbar1.html'%}
+	  <section id="home-section" class="hero" data-section="home">
 		  <div class="home-slider  owl-carousel">
 	      <div class="slider-item ">
 	      	<div class="overlay"></div>
@@ -75,7 +75,7 @@
 	    </div>
     </section>
 
-    <section class="ftco-about ftco-counter img ftco-section" id="about-section">
+    <section class="ftco-about ftco-counter img ftco-section" id="about-section" data-section="about">
     	<div class="container">
     		<div class="row d-flex">
     			<div class="col-md-6 col-lg-5 d-flex">
@@ -260,8 +260,8 @@
 
 
 
-{%block content%}{%endblock%}
-  {%include 'projects/post_form.html'%}
+
+  {%include 'index.html'%}
 		
 
     <footer class="ftco-footer ftco-section">
@@ -332,7 +332,7 @@
 
  <script src="{%static 'js/aos.js'%}"></script>
   
-  <script src="{%static 'js/google-map.js'%}"></script>
+  
   <script src="{%static 'js/jquery-3.2.1.min.js'%}"></script>
   
   <script src="{%static 'js/jquery-migrate-3.0.1.min.js'%}"></script>
