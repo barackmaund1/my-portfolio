@@ -6,6 +6,7 @@ $(document).ready(function(){
       $.ajax({
         'url':'/ajax/newsletter/',
         'type':'POST',
+        'headers': {'X-CSRFToken': '{{ csrf_token }}'},
         'data':form.serialize(),
         'dataType':'json',
         'success': function(data){
