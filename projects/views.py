@@ -13,28 +13,25 @@ class PostListView(ListView):
     context_object_name = 'projects'
     ordering = ['-date_posted']
 
-# def createpost(request):
-#     if request.method == 'POST':
-#         if request.POST.get('name') and request.POST.get('subject') and request.POST.get('email') and request.POST.get('message'):
-#             post=Person()
-#             post.name= request.POST.get('name')
-#             post.subject= request.POST.get('subject')
-#             post.email= request.POST.get('email')
-#             post.message= request.POST.get('message')
+def createpost(request):
+    if request.method == 'POST':
+        if request.POST.get('name') and request.POST.get('subject') and request.POST.get('email') and request.POST.get('message'):
+            post=Person()
+            post.name= request.POST.get('name')
+            post.subject= request.POST.get('subject')
+            post.email= request.POST.get('email')
+            post.message= request.POST.get('message')
       
-#             post.save()
-#             messages.success(request, f'{post.name} Thank you.Your message has been received!') 
-#             return render(request, 'base.html')  
+            post.save()
+            messages.success(request, f'{post.name} Thank you.Your message has been received!') 
+            return render(request, 'base.html')  
 
-#     else:
-#         return render(request,'base.html')
+    else:
+        return render(request,'base.html')
 
 def home(request):
     return render(request, 'base.html')
-def createpost(request) :  
-    post=Person()  
-     
-    return render(request,'base.html') 
+
 def newsletter(request):
     name = request.POST.get('name')
     email = request.POST.get('email')

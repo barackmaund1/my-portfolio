@@ -2,7 +2,7 @@
 {%load static%}
 {% load bootstrap4%}
 
-    
+ 
     
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900" rel="stylesheet">
 
@@ -21,12 +21,11 @@
     <link rel="stylesheet" href="{%static 'css1/icomoon.css'%}">
     <link rel="stylesheet" href="{%static 'css1/style.css'%}">
   
-   
+
     
 
 
-  {%block content%}{%endblock%}
-    
+	
    
 	<section class="testimony-section" data-section="testimony">
 		<div class="container">
@@ -44,7 +43,7 @@
 								</div>
 							  <p class="mb-4">I love the way you solve problems.</p>
 							  <p class="name">Raphael katana</p>
-							  <span class="position">Technical mentor,at Moringa school </span>
+							  <span class="position">Technical mentor at Moringa school </span>
 						  </div>
 						</div>
 					  </div>
@@ -75,7 +74,8 @@
     
   
 
-	<section class="ftco-section contact-section ftco-no-pb" data-section="contact">
+	
+	  <section class="ftco-section contact-section ftco-no-pb" data-section="contact">
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-3">
 			<div class="col-md-7 heading-section text-center ftco-animate">
@@ -83,6 +83,13 @@
 			  <h2 class="mb-4">Contact Me</h2>
 			  <p></p>
 			</div>
+			{% if messages %}
+            {% for message in messages %}
+              <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+              </div>
+            {% endfor %}
+          {% endif %}
 		  </div>
 		  <div class="row no-gutters block-9">
 			<div class="col-md-6 order-md-last d-flex">
@@ -103,7 +110,7 @@
 					<div class="form-group">
 					  <input type="submit" value="Send Message" class="btn btn-secondary py-3 px-5">
 					</div>
-				  </form>
+				</form>
 			
 			</div>
   
@@ -113,8 +120,7 @@
 		  </div>
 		</div>
 	  </section>
-
-
+  
   <script src="{%static 'js1/jquery.min.js'%}"></script>
   <script src="{%static 'js1/jquery-migrate-3.0.1.min.js'%}"></script>
   <script src="{%static 'js1/popper.min.js'%}"></script>
@@ -130,5 +136,6 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="{%static 'js1/google-map.js'%}"></script>
   <script src="{%static 'js1/main.js'%}"></script>
-    
+  <script type="text/javascript" src="{%static 'js1/newsletter.js'%}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
  

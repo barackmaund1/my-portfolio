@@ -255,9 +255,14 @@
 			</div>
 		</section>
  
-		{%include 'index.html'%}
-		
-	<footer class="ftco-footer ftco-section">
+
+
+
+
+
+{% block content%}{% endblock%}
+  {%include 'index.html'%}
+		<footer class="ftco-footer ftco-section">
       <div class="container">
         <div class="row mb-5">
           <div class="col-md">
@@ -339,7 +344,7 @@
   
   <script src="{%static 'js/jquery.animateNumber.min.js'%}"></script>
   <script src="{%static 'js/scrollax.min.js'%}"></script>
-  <script type="text/javascript" src="{%static 'js/newsletter.js'%}"></script>
+  
   <script src="{%static 'js/main.js'%}"></script>
   <script src="{%static 'js/jquery.min.js'%}"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>

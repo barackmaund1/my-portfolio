@@ -20,9 +20,9 @@ from django.conf.urls.static import static
 from projects.views import home
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('projects/',include(('projects.urls','projects'),namespace='projects')),
+    path('',include(('projects.urls','projects'),namespace='projects')),
     path('apis/v/', include('apis.urls')),
-    path('square/',include("square.urls")),
+    path('',include("square.urls")),
     path('',home,name='base')
 ]
 if settings.DEBUG:
