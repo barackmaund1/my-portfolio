@@ -93,7 +93,7 @@
 		  </div>
 		  <div class="row no-gutters block-9">
 			<div class="col-md-6 order-md-last d-flex">
-				<form action="{% url 'projects:create-post' %}" class="bg-light p-5 contact-form" method="POST"  enctype="multipart/form-data">
+				<form action="{% url 'projects:newsletter' %}" class="bg-light p-5 contact-form" method="POST"  enctype="multipart/form-data">
 					{% csrf_token %}
 					<div class="form-group">
 					  <input type="text" class="form-control"id="name" name="name" placeholder="Your Name" required>
@@ -121,7 +121,7 @@
 		</div>
 	  </section>
   
-	
+	  <script src="{%static 'js1/jquery.min.js'%}"></script>
   <script src="{%static 'js1/jquery-migrate-3.0.1.min.js'%}"></script>
   <script src="{%static 'js1/popper.min.js'%}"></script>
   <script src="{%static 'js1/bootstrap.min.js'%}"></script>
@@ -137,6 +137,6 @@
   <script src="{%static 'js1/google-map.js'%}"></script>
   <script src="{%static 'js1/main.js'%}"></script>
   <script type="text/javascript" src="{%static 'js1/newsletter.js'%}"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
  
