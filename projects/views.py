@@ -23,7 +23,7 @@ def createpost(request):
             post.message= request.POST.get('message')
       
             post.save()
-            messages.success(request, f'{post.name} Thank you.Your message has been received!') 
+            messages.success(request, f'{post.name} Your message has been successfully received and message sent to your email') 
             return render(request, 'base.html')  
 
     else:
